@@ -3,6 +3,7 @@ import GalleryError from 'components/GalleryError';
 import ImageGalleryItem from 'components/ImageGalleryItem';
 import GalleryLoader from 'components/GalleryLoader';
 import galleryAPI from 'services/gallery-api';
+import styles from './ImageGallery.module.css';
 
 class ImageGallery extends Component {
   state = {
@@ -55,7 +56,7 @@ class ImageGallery extends Component {
 
     if (status === 'resolved') {
       return (
-        <ul className="gallery">
+        <ul className={styles.ImageGallery}>
           {gallery.hits.map(hit => (
             <ImageGalleryItem gallery={hit} key={hit.id} />
           ))}

@@ -22,12 +22,16 @@ class Searchbar extends Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.Searchbar}>
         <header name="searchbar">
-          <form name="form" onSubmit={this.searchFormSubmit}>
+          <form
+            name="form"
+            className={styles.SearchForm}
+            onSubmit={this.searchFormSubmit}
+          >
             <input
               name="searchValue"
-              className="input"
+              className={styles.SearchForm__input}
               type="text"
               value={this.state.searchValue}
               onChange={this.searchInputChange}
@@ -36,8 +40,8 @@ class Searchbar extends Component {
               placeholder="Search images and photos"
             />
 
-            <button type="submit" className="button">
-              <span className="button-label">Search</span>
+            <button type="submit" className={styles.SearchForm__button}>
+              <label className={styles.SearchForm__buttonLabel}>Search</label>
             </button>
           </form>
         </header>
